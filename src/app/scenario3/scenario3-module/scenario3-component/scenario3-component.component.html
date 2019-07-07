@@ -1,0 +1,7 @@
+<p>scenario3-component works!</p>
+
+<input #myUsername type="text">
+  <button (click)="onClick(myUsername.value)">To Child</button>
+  
+
+  <app-scenario3-component-child [parentData]='myMessage'></app-scenario3-component-child>
