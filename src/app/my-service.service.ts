@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,10 +7,6 @@ import { BehaviorSubject } from 'rxjs';
 export class MyServiceService {
 
   constructor() { }
-
-  private user = new BehaviorSubject<string>('xyz');
-  cast = this.user.asObservable();
-  editUser(newUser) {
-    this.user.next(newUser);
+  message: any = new Subject<any>();
   }
-}
+

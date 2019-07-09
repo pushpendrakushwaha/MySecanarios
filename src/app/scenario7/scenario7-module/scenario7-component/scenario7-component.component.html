@@ -1,4 +1,4 @@
 <p>scenario7-component works!</p>
 
-<input [(ngModel)]="editUser" type="text">
-<button (click)="onclick()" class="btn btn-primary">Send</button>
+<input #mymessage type="text">
+<button (click)="onclick(mymessage.value)" >Send</button>

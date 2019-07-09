@@ -15,10 +15,9 @@ export class Scenario7ComponentComponent implements OnInit {
 
 
   ngOnInit() {
-    this.messageService.cast.subscribe(user => this.user = user);
   }
-  onclick() {
-    this.messageService.editUser(this.editUser);
+  onclick(data) {
+    this.messageService.message.next(data);
   }
 
 }
